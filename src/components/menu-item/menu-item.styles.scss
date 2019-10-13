@@ -24,7 +24,9 @@
 
   &.large {
     height: 380px;
+    min-width: 40%;
   }
+
 
   &:first-child {
     margin-right: 7.5px;
