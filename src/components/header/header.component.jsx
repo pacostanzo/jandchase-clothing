@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from "react-redux";
 
 import {ReactComponent as Logo} from '../../assets/needle.svg';
 
@@ -31,4 +32,9 @@ const Header = ({currentUser}) => (
     </div>
 );
 
-export default Header;
+// state is the root reducer which have a user: userReducer
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(Header);
