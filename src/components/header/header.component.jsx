@@ -7,6 +7,7 @@ import {ReactComponent as Logo} from '../../assets/needle.svg';
 import './header.styles.scss';
 
 import {auth} from '../../firebase/firebase.utils';
+import CartIcon from "../cart/cart-icon/cart-icon.component";
 
 const Header = ({currentUser}) => (
     <div className='header'>
@@ -28,13 +29,14 @@ const Header = ({currentUser}) => (
                         SIGN IN
                     </Link>
             }
+            <CartIcon/>
         </div>
     </div>
 );
 
 // state is the root reducer which have a user: userReducer
 const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+    currentUser: state.user.currentUser
 });
 
 export default connect(mapStateToProps)(Header);
