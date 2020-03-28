@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import {createStructuredSelector} from 'reselect';
 
 
-import HomePage from './pages/homepage/Homepage.component';
+import HomePage from './pages/homepage/homepage.component';
 import ShopPage from "./pages/shop/shop.component";
 import Header from './components/header/header.component';
 import SignInPage from './pages/signin/sign-in-page.component';
