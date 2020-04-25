@@ -1,40 +1,19 @@
-import React, {useEffect, useRef, useCallback} from 'react';
+import React from 'react';
 import {connect} from "react-redux";
 import {createStructuredSelector} from 'reselect';
 
 import CustomButton from '../../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
-import {selectCartItems, selectCartHidden} from '../../../redux/cart/cart.selectors';
-
-import {toggleCartHidden} from "../../../redux/cart/cart.actions";
+import {selectCartItems} from '../../../redux/cart/cart.selectors';
+import {toggleCartHidden} from '../../../redux/cart/cart.actions';
 
 import './cart-dropdown.styles.scss';
 import {withRouter} from "react-router-dom";
 
-const CartDropdown = ({cartItems, hidden, history, toggleCartHidden}) => {
-    const node = useRef();
-
-    const handleClickOutside = useCallback(e => {
-        if (node.current.contains(e.target)) {
-            return;
-        }
-        toggleCartHidden();
-    }, [toggleCartHidden]);
-
-    useEffect(() => {
-        if (!hidden) {
-            document.addEventListener("mousedown", handleClickOutside);
-        } else {
-            document.removeEventListener("mousedown", handleClickOutside);
-        }
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [hidden, handleClickOutside]);
+const CartDropdown = ({cartItems, history, dispatch}) => {
 
     return (
-        <div ref={node} className='cart-dropdown'>
+        <div className='cart-dropdown'>
             <div className='cart-items'>
                 {
                     cartItems.length ?
@@ -46,7 +25,7 @@ const CartDropdown = ({cartItems, hidden, history, toggleCartHidden}) => {
             </div>
             <CustomButton onClick={() => {
                 history.push('/checkout');
-                toggleCartHidden();
+                dispatch(toggleCartHidden());
             }
             }>
                 GO TO CHECKOUT
@@ -56,12 +35,7 @@ const CartDropdown = ({cartItems, hidden, history, toggleCartHidden}) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-    cartItems: selectCartItems,
-    hidden: selectCartHidden
+    cartItems: selectCartItems
 });
 
-const mapDispatchToProps = dispatch => ({
-    toggleCartHidden: () => dispatch(toggleCartHidden())
-});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown));
+export default withRouter(connect(mapStateToProps)(CartDropdown));
