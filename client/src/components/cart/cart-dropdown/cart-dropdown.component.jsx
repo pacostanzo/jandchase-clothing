@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useCallback} from 'react';
 import {connect} from "react-redux";
 import {createStructuredSelector} from 'reselect';
 
@@ -11,18 +11,15 @@ import {toggleCartHidden} from "../../../redux/cart/cart.actions";
 import './cart-dropdown.styles.scss';
 import {withRouter} from "react-router-dom";
 
-const CartDropdown = ({cartItems, hidden, history, dispatch}) => {
+const CartDropdown = ({cartItems, hidden, history, toggleCartHidden}) => {
     const node = useRef();
 
-    const handleClickOutside = e => {
-        console.log("clicking anywhere");
+    const handleClickOutside = useCallback(e => {
         if (node.current.contains(e.target)) {
-            // inside click
             return;
         }
-        // outside click
-        dispatch(toggleCartHidden());
-    };
+        toggleCartHidden();
+    }, [toggleCartHidden]);
 
     useEffect(() => {
         if (!hidden) {
@@ -34,7 +31,7 @@ const CartDropdown = ({cartItems, hidden, history, dispatch}) => {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [hidden]);
+    }, [hidden, handleClickOutside]);
 
     return (
         <div ref={node} className='cart-dropdown'>
@@ -49,7 +46,7 @@ const CartDropdown = ({cartItems, hidden, history, dispatch}) => {
             </div>
             <CustomButton onClick={() => {
                 history.push('/checkout');
-                dispatch(toggleCartHidden());
+                toggleCartHidden();
             }
             }>
                 GO TO CHECKOUT
@@ -63,5 +60,8 @@ const mapStateToProps = createStructuredSelector({
     hidden: selectCartHidden
 });
 
+const mapDispatchToProps = dispatch => ({
+    toggleCartHidden: () => dispatch(toggleCartHidden())
+});
 
-export default withRouter(connect(mapStateToProps)(CartDropdown));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown));
