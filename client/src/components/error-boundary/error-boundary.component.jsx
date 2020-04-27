@@ -1,5 +1,4 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
 
 import {
     ErrorImageOverlay,
@@ -8,21 +7,12 @@ import {
 } from './error-boundary.styles';
 
 class ErrorBoundary extends React.Component {
-    constructor({history}) {
+    constructor() {
         super();
 
         this.state = {
             hasErrored: false
         };
-
-
-        history.listen((location, action) => {
-            if (this.state.hasError) {
-                this.setState({
-                    hasError: false,
-                });
-            }
-        });
     }
 
     static getDerivedStateFromError(error) {
@@ -49,4 +39,4 @@ class ErrorBoundary extends React.Component {
     }
 }
 
-export default withRouter(ErrorBoundary);
+export default ErrorBoundary;
