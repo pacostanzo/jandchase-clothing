@@ -60,7 +60,7 @@ export function register(config) {
                 })
             );
         });
-        window.location.href = "./";
+        //window.location.href = "./";
     }
 }
 
