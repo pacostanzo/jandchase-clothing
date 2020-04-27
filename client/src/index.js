@@ -21,9 +21,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-serviceWorker.register({
-    onUpdate:() => {
-        //Some UI notification comes here, then reload
-        window.location.reload();
-    }
-});
+serviceWorker.register();
