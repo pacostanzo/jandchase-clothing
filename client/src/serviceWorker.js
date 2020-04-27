@@ -51,16 +51,6 @@ export function register(config) {
                 registerValidSW(swUrl, config);
             }
         });
-
-        window.addEventListener('activate', function(event) {
-            event.waitUntil(
-                caches.keys().then(function(names) {
-                    for (let name of names)
-                        caches.delete(name);
-                })
-            );
-        });
-        //window.location.href = "./";
     }
 }
 
