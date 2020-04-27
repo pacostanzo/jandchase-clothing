@@ -2,46 +2,46 @@ const INITIAL_STATE = {
     sections: [
         {
             title: 'hats',
-            imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/janchase-clothing.appspot.com/o/homepage%2Fhats.jpeg?alt=media&token=def2d6d1-92d6-4827-af76-613a691f3991',
             id: 1,
             linkUrl: 'shop/hats'
         },
         {
             title: 'jackets',
-            imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/janchase-clothing.appspot.com/o/homepage%2Fjackets.jpeg?alt=media&token=91d678ee-288b-4d44-88ee-67d28e446542',
             id: 2,
             linkUrl: 'shop/jackets'
         },
         {
             title: 'sneakers',
-            imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/janchase-clothing.appspot.com/o/homepage%2Fsneakers.jpeg?alt=media&token=435cc76a-11ff-4f05-9460-9631a86df937',
             id: 3,
             linkUrl: 'shop/sneakers'
         },
         {
             title: 'womens',
-            imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/janchase-clothing.appspot.com/o/homepage%2Fwomens.jpeg?alt=media&token=c17a3fd6-4098-4401-af65-57cba9f7c9e2',
             size: 'large',
             id: 4,
             linkUrl: 'shop/womens'
         },
         {
             title: 'mens',
-            imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/janchase-clothing.appspot.com/o/homepage%2Fmen.jpeg?alt=media&token=5ebdf588-527a-4f04-b5be-bb5783055210',
             size: 'large',
             id: 5,
             linkUrl: 'shop/mens'
         },
         {
             title: 'ungendered',
-            imageUrl: 'https://images.squarespace-cdn.com/content/v1/57b1c6fdbe6594dc4a678df1/1551378076820-TJBUCCT9RC5BQC123F7S/ke17ZwdGBToddI8pDm48kFWxnDtCdRm2WA9rXcwtIYR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcTSrQkGwCGRqSxozz07hWZrYGYYH8sg4qn8Lpf9k1pYMHPsat2_S1jaQY3SwdyaXg/gn3.jpg?format=1500w',
+            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/janchase-clothing.appspot.com/o/homepage%2Fungendered.jpeg?alt=media&token=40bb96f6-6da4-4a79-bbc7-bbbcb40c3655',
             id: 6,
             size: 'large',
             linkUrl: 'shop/ungendered'
         },
         {
             title: 'kids',
-            imageUrl: 'https://peopledotcom.files.wordpress.com/2018/11/celine-dion-5.jpg?w=2606&h=1738',
+            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/janchase-clothing.appspot.com/o/homepage%2Fkids.jpeg?alt=media&token=0a58cd40-a6c3-4295-a11c-4380754de5c2',
             id: 7,
             size: "large",
             linkUrl: 'shop/kids'
