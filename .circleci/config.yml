@@ -12,11 +12,6 @@ jobs:
             - run: cd client
             - run: npm install
             - run: npm test
-            - run:
-                name: "Run Jest and Collect Coverage Reports"
-                command: jest --collectCoverage=true
-            - store_artifacts:
-                path: coverage
 
 workflows:
   build-and-test:
