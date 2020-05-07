@@ -1,3 +1,5 @@
+[![Build Status](https://circleci.com/gh/costanzopa/jandchase-api/tree/master.svg?style=svg)](https://circleci.com/gh/costanzopa/jandchase-clothing/tree/master)
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/costanzopa/jandchase-clothing/master/LICENSE.txt)
 # Jandchase Clothing Inc
 
 A project of the portfolio type that implement a clothing e-commerce.
