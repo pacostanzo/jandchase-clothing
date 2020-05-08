@@ -8,7 +8,7 @@ import {signUpStart} from '../../redux/user/user.actions';
 
 import './sign-up.styles.scss';
 
-const SignUp = (signUpStart) => {
+const SignUp = ({signUpStart}) => {
     const [userCredentials, setUserCredentials] = useState({
         displayName: '',
         email: '',
@@ -24,7 +24,7 @@ const SignUp = (signUpStart) => {
             alert("passwords don't match");
             return;
         }
-        signUpStart({displayName, email, password});
+        signUpStart(userCredentials);
     };
 
     const handleChange = event => {

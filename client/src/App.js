@@ -16,8 +16,8 @@ import {GlobalStyle} from "./global.styles";
 
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
-const SignInPage = lazy(() =>
-    import('./pages/signin/sign-in-page.component')
+const SignInPageContainer = lazy(() =>
+    import('./pages/signin/sign-in.container')
 );
 
 const App = ({checkUserSession, currentUser}) => {
@@ -39,7 +39,7 @@ const App = ({checkUserSession, currentUser}) => {
                                currentUser ? (
                                    <Redirect to='/'/>
                                ) : (
-                                   <SignInPage/>
+                                   <SignInPageContainer/>
                                )
                            }
                     />
