@@ -8,7 +8,7 @@ import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from "./he
 
 import {selectCurrentUser} from '../../redux/user/user.selectors';
 import {signOutStart} from '../../redux/user/user.actions';
-import CartContainer from "../cart/cart-container/cart-container.componer";
+import CartContainer from "../cart/cart-container/cart-container.componen";
 
 const Header = ({currentUser, signOutStart}) => (
     <HeaderContainer>
