@@ -8,7 +8,6 @@ jobs:
     steps:
       - checkout
       - run: npm run install_all
-      - run: npm run test a
 
 workflows:
   build-and-test:
