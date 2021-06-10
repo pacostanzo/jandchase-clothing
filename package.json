@@ -12,7 +12,8 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-    "install_all": "npm install --silence && cd client && npm install --silence"
+    "install_all": "npm install --silence && cd client && npm install --silence",
+    "test": "cd client && npm run test a"
   },
   "dependencies": {
     "axios": "^0.21.1",
