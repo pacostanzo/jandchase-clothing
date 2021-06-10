@@ -11,7 +11,7 @@ jobs:
           steps:
             - run: cd client
             - run: npm install
-            - run: npm test
+            - run: npm run test a
 
 workflows:
   build-and-test:
