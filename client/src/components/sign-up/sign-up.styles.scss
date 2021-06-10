@@ -1,0 +1,15 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+  .title {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .subtitle {
+    color: grey;
+    font-weight: bold;
+  }
+}
