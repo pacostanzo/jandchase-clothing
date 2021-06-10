@@ -24,6 +24,9 @@
     "express-sslify": "^1.2.0",
     "stripe": "6.28.0"
   },
+  "resolutions": {
+    "babel-jest": "24.7.1"
+  },
   "devDependencies": {
     "concurrently": "^6.2.0",
     "nodemon": "^2.0.7"
